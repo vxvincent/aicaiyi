@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  aicaiyi
+//
+//  Created by 吴彬 on 15/7/3.
+//  Copyright (c) 2015年 吴彬. All rights reserved.
+//
+
+#ifndef aicaiyi_PrefixHeader_pch
+#define aicaiyi_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+#import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+
+#define BASE_URL @"http://www.haoapp123.com/app/localuser/aicaiyin/api.php?"
+#define API_BASE_URL(_API_) [NSURL URLWithString:[@"http://www.haoapp123.com/app/localuser/aicaiyin/api.php?" stringByAppendingString:_API_]]
+#define PIC_URL @"http://www.haoapp123.com/app/localuser/aicaiyin/"
+#define DEFAULTCOOKIE @"UserDefaultsCookie"
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+// 状态栏高度
+#define statusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+// 导航栏高度
+#define navBarHeight self.navigationController.navigationBar.frame.size.height
+//NSUserDefaults 实例化
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults]
+
+#define image(a) [UIImage imageNamed:a]
+#define grayBackgroud [UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1]
+
+
+#define kUserName @"username"
+#define kPassWord @"password"
+#define kKeyArray @"keysarray"
+#define kSelectKeyArray @"Selectkeysarray"
+//#define kContacts @"Contacts"
+
+#define IsIOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >=7.0 && [[[UIDevice currentDevice] systemVersion] floatValue] <8.0 ? YES : NO)
